@@ -158,6 +158,8 @@ h2{font-weight:300;font-size:clamp(26px,3.4vw,44px);line-height:1.15;letter-spac
 /* top bar (sticky in vertical mode, fixed in landscape mode) */
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;padding-inline:var(--gut);max-width:1320px;margin:0 auto}
 .topbar nav{position:static}
+html:not(.hz) .topbar{max-width:none;padding-inline:max(var(--gut),calc((100vw - 1320px)/2 + var(--gut)));background:rgba(62,88,130,.42);backdrop-filter:blur(16px) saturate(1.1);-webkit-backdrop-filter:blur(16px) saturate(1.1);border-bottom:1px solid rgba(255,255,255,.12)}
+@media (max-width:520px){.topbar nav{padding-block:12px}.topbar nav .wm{height:18px}}
 .hzbar{display:none}
 /* Landscape scroll mode: sections become full-screen panels laid side by side; the page loops. */
 html.hz,html.hz body{overflow:hidden;height:100%}
